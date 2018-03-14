@@ -1,6 +1,6 @@
 function getInput(){
     var name = $('#inputName').val();
-    var age = Number($('#inputAge').val());
-    
-    
+    var age = $('#inputAge').val();
+
+    window.location = './add/' + name + '/' + age;
 }
