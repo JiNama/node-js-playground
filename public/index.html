@@ -16,16 +16,21 @@
         crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>p5 test using Node.js</title>
+    <title>Node.js Playground</title>
 </head>
-<body style="background: white; overflow:hidden">
+<body style="background-color: rgb(51, 51, 51); overflow:hidden">
 
     <div style="background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); padding:64px">
-        <h1 style="line-height:0; font-size:80px; text-align:center; color:white"><b>Hello World</b></h1>
+        <h1 style="line-height:0; font-size:80px; text-align:center; color:white"><b>Node.js Playground</b></h1>
     </div>
 
-    <script src="sketch.js"></script>
-    <script src="dom.js"></script>
+    <div style="padding:32px">
+        <input id="inputName"></input>
+        <input id="inputAge"></input>
+        <button id="buttonSubmit" onclick="getInput()">Submit</button>
+    </div>
+
+    <script src="input.js"></script>
 
 </body>
 </html>
