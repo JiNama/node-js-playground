@@ -13,10 +13,10 @@ if(server){
 
 var info = JSON.parse(fs.readFileSync('info.json'));
 
-app.get('/info', getInfo);
+app.get('/list', getInfo);
 
 function getInfo(req, res){
-    res.send(info);
+    res.json(info);
 }
 
 // request user input through url
@@ -44,7 +44,5 @@ function addInfo(req, res){
         Name: inputName,
         Age: inputAge
     }
-
-    res.send(thanksForAdding);
 }
 
