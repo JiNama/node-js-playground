@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
     </script>
-    <script
-        src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
         crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        </script>
+    <script src="/semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="/semantic/dist/semantic.min.css" type="text/css">
     <link rel="stylesheet" href="styles.css" type="text/css">
     <title>Node.js Playground</title>
 </head>
+
 <body style="background-color: rgb(51, 51, 51); overflow:hidden">
 
     <div style="background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); padding:64px">
-        <h1 style="line-height:0; font-size:80px; text-align:center; color:white"><b>Node.js Playground</b></h1>
+        <h1 style="line-height:0; font-size:7vw; text-align:center; color:white">
+            <b>Node.js Playground</b>
+        </h1>
     </div>
 
-    <div style="padding:32px; text-align:center; color: white;">
-        <p>Name: </p><input id="inputName"></input>
-        <p>Age: </p><input id="inputAge"></input>
-        <br>
-        <button id="buttonSubmit" onclick="getInput()">Submit</button>
-        <button id="fetchData" onclick="getData()">Fetch List</button>
+    <div style="padding:32px; display:block; color: white; text-align:center;" class="ui input">
+        <input id="inputName" placeholder="Name" style="margin-right:10px"></input>
+        <input id="inputAge" placeholder="Age"></input>
     </div>
+    <div style="text-align:center">
+        <button id="buttonSubmit" class="ui button" onclick="getInput()">Submit</button>
+        <button class="ui button" onclick="getData()">Fetch List</button>
+    </div>
+    <div class="ui icon buttons" style="display:block; text-align:center; margin:25px">
+        <button class="ui button" id="playButton">
+          <i class="play icon"></i>
+        </button>
+        <button class="ui button" id="pauseButton">
+          <i class="pause icon"></i>
+        </button>
+        <button class="ui button" id="stopButton">
+            <i class="stop icon"></i>
+        </button>
+      </div>
+
+      <audio src="fh.mp3" type="audio/mpeg" id="FH"></audio>
 
     <script src="input.js"></script>
 
 </body>
+
 </html>
