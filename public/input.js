@@ -20,10 +20,7 @@ function getInput() {
 }
 
 function getData() {
-    $.getJSON('./list', returnData);
-    function returnData(data) {
-        alert(JSON.stringify(data, null, 2));
-    }
+    $.getJSON('./list', (data) => alert(JSON.stringify(data, null, 2)));
 }
 
 $('#playButton').click(() => {$('#FH').trigger("play");$('#FH').animate({volume: 1}, 500);});

@@ -45,6 +45,6 @@ function addInfo(req, res){
         Age: inputAge
     }
 
-    res.send(thanksForAdding);
+    //res.send(thanksForAdding);
 }
 
