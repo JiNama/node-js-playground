@@ -1,7 +1,8 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
-var server = app.listen(3000);
+var port = process.env.PORT || 3000;
+var server = app.listen(port);
 /*
 var mongoose = require('mongoose');
 
