@@ -2,12 +2,28 @@ var fs = require('fs');
 var express = require('express');
 var app = express();
 var server = app.listen(3000);
+/*
+var mongoose = require('mongoose');
 
-app.use(express.static('public'));
+//mongoose.connect('mongodb://localhost/test');
 
-if(server){
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+
+    var Name = mongoose.model('Name', mongoose.Schema({name: String, age: Number}));
+    var josh = new Name({name: 'josh', age: 18});
+
+});
+*/
+
+app.use(express.static('public', {
+    extensions: ['html']
+}));
+
+if (server) {
     console.log("Server is running! Hold 'ctrl' and press 'c' to exit.");
-}else{
+} else {
     console.log("Error.");
 }
 
@@ -15,14 +31,14 @@ var info = JSON.parse(fs.readFileSync('info.json'));
 
 app.get('/list', getInfo);
 
-function getInfo(req, res){
+function getInfo(req, res) {
     res.json(info);
 }
 
 // request user input through url
 app.get('/add/:name/:age/', addInfo);
 
-function addInfo(req, res){
+function addInfo(req, res) {
     var inputName = (req.params.name).toLowerCase();
     var inputAge = Number(req.params.age);
 
@@ -31,10 +47,10 @@ function addInfo(req, res){
 
     fs.writeFileSync('info.json', JSON.stringify(info, null, 4), finished);
 
-    function finished(err){
-        if (err){
+    function finished(err) {
+        if (err) {
             console.log(err);
-        }else{
+        } else {
             console.log('It worked!');
         }
     }
@@ -46,5 +62,10 @@ function addInfo(req, res){
     }
 
     //res.send(thanksForAdding);
+
 }
+
+//app.redirect(); changes URL josh!!!
+
+
 

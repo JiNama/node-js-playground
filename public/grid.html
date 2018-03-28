@@ -17,7 +17,7 @@
     <title>Node.js Playground</title>
 </head>
 
-<body style="background-color: rgb(51, 51, 51); overflow:hidden">
+<body style="background-color: rgb(51, 51, 51);">
 
     <div style="background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); padding:64px">
         <h1 style="line-height:0; font-size:6vw; text-align:center; color:white">
@@ -25,32 +25,12 @@
         </h1>
     </div>
 
-    <div style="padding:32px; display:block; color: white; text-align:center;" class="ui input">
-        <input id="inputName" placeholder="Name" style="margin-right:10px"></input>
-        <input id="inputAge" placeholder="Age"></input>
+    <div class="grid">
+        <div class="header">Testing CSS Grid Functionality</div>
+        <div class="menu"><img src="https://pdoyl.curd.io/cdn2.unrealengine.com/Epic+Games%2FEpicGames%2FCarousel%2FWebsiteCarousel-948x490-eeeb658b33b41e9ce052aeea60866e793608d3e9.jpg" height="100%" width="100%"></img></div>
+        <div class="content">Main</div>
+        <div class="footer">Footer</div>
     </div>
-    <div style="text-align:center">
-        <button id="buttonSubmit" class="ui button" onclick="getInput()">Submit</button>
-        <button class="ui button" onclick="getData()">Fetch List</button>
-    </div>
-    <div class="ui icon buttons" style="display:block; text-align:center; margin:25px">
-        <button class="ui button" id="playButton">
-            <i class="play icon"></i>
-        </button>
-        <button class="ui button" id="pauseButton">
-            <i class="pause icon"></i>
-        </button>
-        <button class="ui button" id="stopButton">
-            <i class="stop icon"></i>
-        </button>
-    </div>
-    <div style="text-align:center">
-        <button class="ui button" onclick="gridPage()">Testing Grid</button>
-    </div>
-
-    <audio src="fh.mp3" type="audio/mpeg" id="FH"></audio>
-
-    <script src="input.js"></script>
 
 </body>
 

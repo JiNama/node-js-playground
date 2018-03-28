@@ -23,9 +23,17 @@ function getData() {
     $.getJSON('./list', (data) => alert(JSON.stringify(data, null, 2)));
 }
 
-$('#playButton').click(() => {$('#FH').trigger("play");$('#FH').animate({volume: 1}, 500);});
+$('#playButton').click(() => {$('#FH').trigger('play');$('#FH').animate({volume: 1}, 500);});
 $('#pauseButton').click(() => {
     $('#FH').animate({volume: 0}, 500);
-    setTimeout(() => $('#FH').trigger("pause"), 550);
+    setTimeout(() => $('#FH').trigger('pause'), 500);
 });
-$('#stopButton').click(() => $('#FH').trigger("stop"));
+$('#stopButton').click(() => {
+    $('#FH').animate({volume: 0}, 500);
+    setTimeout(() => $('#FH').trigger('pause'), 500);
+    setTimeout(() => $('#FH').prop("currentTime", 0), 550);
+});
+
+function gridPage(){
+    window.location = 'grid';
+}
