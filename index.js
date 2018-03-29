@@ -62,6 +62,10 @@ function addInfo(req, res) {
         Age: inputAge
     }
 
+    res.statusCode = 302;
+    res.setHeader('Location', '/');
+    res.end();
+
     //res.send(thanksForAdding);
 
 }

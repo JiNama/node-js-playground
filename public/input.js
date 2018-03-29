@@ -4,9 +4,8 @@ function getInput() {
 
     if (name && age) {
         if (Number.isInteger(age)) {
-            window.location = './add/' + name + '/' + age;
-            setTimeout(function () { window.location = 'localhost:3000'; }, 10);
             alert('Thank you for your input!\nName: ' + name + '\nAge: ' + age);
+            window.location = './add/' + name + '/' + age;
         } else {
             alert('Oops! Something went wrong. Please make sure you\'re inputting your age as an integer and try again.');
         }
