@@ -1,19 +1,19 @@
-var fs = require('fs');
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 3000;
-var server = app.listen(port);
+let fs = require('fs');
+let express = require('express');
+let app = express();
+let port = process.env.PORT || 3000;
+let server = app.listen(port);
 /*
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
 
 //mongoose.connect('mongodb://localhost/test');
 
-var db = mongoose.connection;
+let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
 
-    var Name = mongoose.model('Name', mongoose.Schema({name: String, age: Number}));
-    var josh = new Name({name: 'josh', age: 18});
+    let Name = mongoose.model('Name', mongoose.Schema({name: String, age: Number}));
+    let josh = new Name({name: 'josh', age: 18});
 
 });
 */
@@ -28,7 +28,7 @@ if (server) {
     console.log("Error.");
 }
 
-var info = JSON.parse(fs.readFileSync('info.json'));
+let info = JSON.parse(fs.readFileSync('info.json'));
 
 app.get('/list', getInfo);
 
@@ -40,23 +40,15 @@ function getInfo(req, res) {
 app.get('/add/:name/:age/', addInfo);
 
 function addInfo(req, res) {
-    var inputName = (req.params.name).toLowerCase();
-    var inputAge = Number(req.params.age);
+    let inputName = (req.params.name).toLowerCase();
+    let inputAge = Number(req.params.age);
 
     // {inputName: inputAge}
     info[inputName] = inputAge;
 
-    fs.writeFileSync('info.json', JSON.stringify(info, null, 4), finished);
+    fs.writeFileSync('info.json', JSON.stringify(info, null, 4));
 
-    function finished(err) {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log('It worked!');
-        }
-    }
-
-    var thanksForAdding = {
+    let thanksForAdding = {
         Message: 'Thank you for adding data!',
         Name: inputName,
         Age: inputAge
@@ -72,5 +64,5 @@ function addInfo(req, res) {
 
 //app.redirect(); changes URL josh!!!
 
-
+setInterval(() => info = JSON.parse(fs.readFileSync('info.json')), 60000*10);
 
