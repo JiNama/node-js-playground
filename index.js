@@ -64,5 +64,7 @@ function addInfo(req, res) {
 
 //app.redirect(); changes URL josh!!!
 
-setInterval(() => info = JSON.parse(fs.readFileSync('info.json')), 60000*10);
-
+var http = require("http");
+setInterval(function() {
+    http.get("http://joshuashephard.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
