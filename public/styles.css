@@ -3,7 +3,7 @@ body{
 }
 
 div{
-    color:white;
+    color:black;
 }
 
 .grid > div{
@@ -29,6 +29,7 @@ div{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .menu{
@@ -45,3 +46,7 @@ div{
     grid-area: footer;
     padding: 10px;
 }
+
+@media only screen and (max-width: 600px)  {   
+    .header {font-size: 2em};
+}   
