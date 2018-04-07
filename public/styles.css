@@ -3,7 +3,7 @@ body{
 }
 
 input{
-    width: 10vw;
+    width: 120px;
 }
 
 div{
@@ -53,5 +53,4 @@ div{
 
 @media only screen and (max-width: 600px)  {   
     .header {font-size: 2em};
-    input {width: 100%};
 }   
