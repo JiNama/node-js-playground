@@ -18,51 +18,54 @@
 <body style="background-color: rgb(51, 51, 51); margin:0; overflow-x:hidden">
 
     <div style="background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); padding:32px">
-        <h1 style="line-height:0; font-size:6vw; text-align:center; color:white"><b>Node.js Playground</b></h1>
+        <h1 style="line-height:0; font-size:6vw; text-align:center; color:white">
+            <b>Node.js Playground</b>
+        </h1>
     </div>
 
     <div class="gridinindex">
         <div class="header"></div>
-        <div class="menu"><img src="https://ih1.redbubble.net/image.109336634.1604/flat,550x550,075,f.u1.jpg" height="100%" width="100%" style="background:darkred"></img></div>
-        <div class="content"></div>
-    </div>
-
-    <div style="text-align:center; display:block; margin:20px">
-        <input id="inputName" placeholder="Name" style="margin-right:10px;"/>
-        <input id="inputAge" placeholder="Age"/>
-    </div>
-
-    <div style="text-align:center">
-        <button id="buttonSubmit" onclick="getInput()">Submit</button>
-        <button onclick="getData()">Fetch List</button>
-    </div>
-
-    <div style="text-align:center; padding-top:20px">
-        <select id="selectSong" onchange="changedSong()">
-            <option>Modern Slavery</option>
-            <option>Faded Heart</option>
-            <option>Dancing In The Moonlight</option>
-        </select>
-    </div>
-
-    <div style="display:block; text-align:center; margin:25px">
-        <button id="playButton">
-            <img src="https://png.icons8.com/ios/50/000000/next.png" height="20px" width="20px">
-        </button>
-        <button id="pauseButton">
-            <img src="https://png.icons8.com/ios/50/000000/pause-squared-filled.png" height="20px" width="20px">
-        </button>
-        <button id="stopButton">
-            <img src="https://png.icons8.com/metro/50/000000/close-window.png" height="20px" width="20px">
-        </button>
-    </div>
-
-    <div style="text-align:center">
-        <button onclick="gridPage()">Testing Grid</button>
+        <div class="menu">
+            <img src="https://ih1.redbubble.net/image.109336634.1604/flat,550x550,075,f.u1.jpg" height="100%" width="100%" style="background:darkred"></img>
+        </div>
+        <div class="content">
+            <div style="text-align:center; display:block; margin:20px">
+                <input id="inputName" placeholder="Name" style="margin-right:10px;" />
+                <input id="inputAge" placeholder="Age" />
+            </div>
+            <div style="text-align:center">
+                <button id="buttonSubmit" onclick="getInput()">Submit</button>
+                <button onclick="getData()">Fetch List</button>
+            </div>
+            <div style="text-align:center; margin-top:20px">
+                <button onclick="gridPage()">Testing Grid</button>
+            </div>
+        </div>
+        <div class="music">
+            <div style="text-align:center; padding-top:20px">
+                <select id="selectSong" onchange="changedSong()">
+                    <option>Modern Slavery</option>
+                    <option>Faded Heart</option>
+                    <option>Dancing In The Moonlight</option>
+                </select>
+            </div>
+            <div style="display:block; text-align:center; margin:25px">
+                <button id="playButton">
+                    <img src="https://png.icons8.com/ios/50/000000/next.png" height="20px" width="20px">
+                </button>
+                <button id="pauseButton">
+                    <img src="https://png.icons8.com/ios/50/000000/pause-squared-filled.png" height="20px" width="20px">
+                </button>
+                <button id="stopButton">
+                    <img src="https://png.icons8.com/metro/50/000000/close-window.png" height="20px" width="20px">
+                </button>
+            </div>
+        </div>
     </div>
 
     <div class="footercontainer">
-        <div class="bottomfooter">Author: Joshua Shephard<br>Purpose: Messing around with RESTing API, writing to JSON file.</div>
+        <div class="bottomfooter">Author: Joshua Shephard
+            <br>Purpose: Messing around with RESTing API, writing to JSON file.</div>
     </div>
 
     <audio src="music/modernslavery.mp3" type="audio/mpeg" id="musicPlayer"></audio>

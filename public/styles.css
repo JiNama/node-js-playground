@@ -57,7 +57,7 @@ div{
     grid-auto-rows: minmax(6em, auto);
     grid-template-areas: 
     'header header header header'
-    'menu content content content';
+    'menu content content music';
 }
 
 .header{
@@ -81,6 +81,11 @@ div{
 
 .footer{
     grid-area: footer;
+    padding: 10px;
+}
+
+.music{
+    grid-area: music;
     padding: 10px;
 }
 
