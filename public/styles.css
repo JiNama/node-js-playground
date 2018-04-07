@@ -10,6 +10,17 @@ div{
     color:black;
 }
 
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:40px;
+    background:#6d0019;
+    padding:10px;
+    color:darkgrey;
+    text-align: center;
+}
+
 .grid > div{
     background-color: grey;
 }
@@ -53,5 +64,4 @@ div{
 
 @media only screen and (max-width: 600px)  {   
     .header {font-size: 2em};
-    
 }   

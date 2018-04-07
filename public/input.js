@@ -22,28 +22,28 @@ function getData() {
     $.getJSON('./list', (data) => alert(JSON.stringify(data, null, 2)));
 }
 
-$('#playButton').click(() => {$('#musicPlayer').trigger('play');$('#musicPlayer').animate({volume: 1}, 500);});
+$('#playButton').click(() => { $('#musicPlayer').trigger('play'); $('#musicPlayer').animate({ volume: 1 }, 500); });
 $('#pauseButton').click(() => {
-    $('#musicPlayer').animate({volume: 0}, 500);
+    $('#musicPlayer').animate({ volume: 0 }, 500);
     setTimeout(() => $('#musicPlayer').trigger('pause'), 500);
 });
 $('#stopButton').click(() => {
-    $('#musicPlayer').animate({volume: 0}, 500);
+    $('#musicPlayer').animate({ volume: 0 }, 500);
     setTimeout(() => $('#musicPlayer').trigger('pause'), 500);
     setTimeout(() => $('#musicPlayer').prop("currentTime", 0), 550);
 });
 
-function gridPage(){
+function gridPage() {
     window.location = 'grid';
 }
 
-function changedSong(){
+function changedSong() {
     var getSong = $('#selectSong').val();
-    if(getSong == 'Modern Slavery'){
-        $('#musicPlayer').attr('src','music/modernslavery.mp3');
-    }else if(getSong == 'Faded Heart'){
-        $('#musicPlayer').attr('src','music/fadedheart.mp3');
-    }else if(getSong == 'Dancing In The Moonlight'){
-        $('#musicPlayer').attr('src','music/dancinginthemoonlight.mp3');
+    if (getSong == 'Modern Slavery') {
+        $('#musicPlayer').attr('src', 'music/modernslavery.mp3');
+    } else if (getSong == 'Faded Heart') {
+        $('#musicPlayer').attr('src', 'music/fadedheart.mp3');
+    } else if (getSong == 'Dancing In The Moonlight') {
+        $('#musicPlayer').attr('src', 'music/dancinginthemoonlight.mp3');
     }
 }
