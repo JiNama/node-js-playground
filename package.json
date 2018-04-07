@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "git add . && git commit -m \"Quick push to origin\" && git push origin master"
   },
   "author": "",
   "license": "ISC",
