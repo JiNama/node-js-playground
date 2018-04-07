@@ -1,5 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
 }
 
 input{
@@ -11,8 +12,9 @@ div{
 }
 
 .bottomfooter{
+    margin-top: 20px;
     font-size: 18px;
-    position:fixed;
+    position: relative;
     bottom:0;
     width:100%;
     height:40px;
@@ -22,11 +24,11 @@ div{
     text-align: center;
 }
 
-.grid > div{
+.gridingrid > div{
     background-color: grey;
 }
 
-.grid{
+.gridingrid{
     grid-gap: 10px;
     padding: 10px;
     background-color: rgb(51, 51, 51);
@@ -37,6 +39,22 @@ div{
     'header header header'
     'menu content content'
     'footer footer footer';
+}
+
+.gridinindex > div{
+    background-color: #6d0019;
+}
+
+.gridinindex{
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: rgb(51, 51, 51);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(6em, auto);
+    grid-template-areas: 
+    'header header header header'
+    'menu content content content';
 }
 
 .header{
@@ -65,5 +83,5 @@ div{
 
 @media only screen and (max-width: 600px)  {   
     .header {font-size: 2em}
-    .bottomfooter {font-size: 10px; display:flex; align-items: center; justify-content: center}
+    .bottomfooter {font-size: 10px; display:flex; align-items: center; justify-content: center; bottom:0}
 }   
