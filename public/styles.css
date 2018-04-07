@@ -93,6 +93,11 @@ div{
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     align-items: center;
+    justify-content: center;
+}
+
+.music div.musicButtonContainer{
+    justify-self: center;
 }
 
 @media only screen and (max-width: 600px)  {   
@@ -104,5 +109,5 @@ div{
     }
     .menu {display:none}
     .music select {width: 120px}
-    
+    .music {grid-gap: 20px}
 }   
