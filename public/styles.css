@@ -13,7 +13,7 @@ div{
 .bottomfooter{
     margin-top: 20px;
     font-size: 18px;
-    position: fixed;
+    position: absolute;
     bottom:0;
     width:100%;
     height:40px;
@@ -120,7 +120,7 @@ div{
 
 @media only screen and (max-width: 600px)  {   
     .header {font-size: 2em}
-    .bottomfooter {font-size: 10px; display:flex; align-items: center; justify-content: center;}
+    .bottomfooter {font-size: 10px; display:flex; align-items: center; justify-content: center; position:fixed}
     .gridinindex {grid-template-areas: 
         'header header header header'
         'content content music music';
