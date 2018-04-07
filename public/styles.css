@@ -77,6 +77,9 @@ div{
 .content{
     grid-area: content;
     padding: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer{
@@ -100,5 +103,6 @@ div{
         'content content music music';
     }
     .menu {display:none}
-    .music select {width: 100%-10}
+    .music select {width: 120px}
+    
 }   
