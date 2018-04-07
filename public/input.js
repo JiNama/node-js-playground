@@ -40,10 +40,10 @@ function gridPage(){
 function changedSong(){
     var getSong = $('#selectSong').val();
     if(getSong == 'Modern Slavery'){
-        $('#musicPlayer').attr('src','modernslavery.mp3');
+        $('#musicPlayer').attr('src','music/modernslavery.mp3');
     }else if(getSong == 'Faded Heart'){
-        $('#musicPlayer').attr('src','fadedheart.mp3');
+        $('#musicPlayer').attr('src','music/fadedheart.mp3');
     }else if(getSong == 'Dancing In The Moonlight'){
-        $('#musicPlayer').attr('src','dancinginthemoonlight.mp3');
+        $('#musicPlayer').attr('src','music/dancinginthemoonlight.mp3');
     }
 }
