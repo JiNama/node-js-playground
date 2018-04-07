@@ -2,10 +2,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-input{
-    width: 120px;
-}
-
 div{
     color:black;
 }
@@ -62,11 +58,33 @@ div{
 
 .header{
     grid-area: header;
-    font-size: 4em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    'name age'
+    'submit fetchlist';
+    grid-gap: 15px;
+    padding: 15px;
+}
+
+.header *{
+    width: 30%;
+}
+
+#inputName{
+    grid-area: name;
+    justify-self: right;
+}
+#inputAge{
+    grid-area: age;
+}
+#buttonSubmit{
+    grid-area: submit;
+    justify-self: right;
+}
+#buttonFetchList{
+    grid-area: fetchlist;
 }
 
 .menu{
@@ -110,4 +128,5 @@ div{
     .menu {display:none}
     .music select {width: 120px}
     .music {grid-gap: 20px}
+    .header * {width: 90%}
 }   
