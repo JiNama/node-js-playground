@@ -10,7 +10,7 @@ div{
     color:black;
 }
 
-.bottomFooter{
+.bottomfooter{
     font-size: 18px;
     position:fixed;
     bottom:0;
@@ -64,6 +64,6 @@ div{
 }
 
 @media only screen and (max-width: 600px)  {   
-    .header {font-size: 2em};
-    .bottomFooter {font-size: 10px};
+    .header {font-size: 2em}
+    .bottomfooter {font-size: 10px}
 }   
