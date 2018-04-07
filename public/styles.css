@@ -11,7 +11,7 @@ div{
 }
 
 footer{
-    font-size: 20px;
+    font-size: 16px;
     position:fixed;
     bottom:0;
     width:100%;
@@ -66,6 +66,6 @@ footer{
 @media only screen and (max-width: 600px)  {   
     .header {font-size: 2em};
     footer {
-        font-size: 5px;
+        font-size: 10px;
     }
 }   
