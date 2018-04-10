@@ -123,10 +123,10 @@ div{
     .music {grid-gap: 20px}
     .header * {width: 90%}
     #selectSong{
-        width: 120px;;
+        width: 140px;;
     }
     #playButton, #pauseButton, #stopButton{
-        width: 3.5em;
-        height: 3.5em;
+        width: 3em;
+        height: 3em;
     }
 }
