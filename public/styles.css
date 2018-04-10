@@ -124,15 +124,8 @@ div{
 }
 
 #playButton, #pauseButton, #stopButton{
-    width: 6em;
-    height: 6em;
-}
-
-@media only screen and (max-width: 960px) {
-    #playButton, #pauseButton, #stopButton{
-        width: 5em;
-        height: 5em;
-    }
+    width: 5em;
+    height: 5em;
 }
 
 @media only screen and (max-width: 600px)  {   
@@ -147,10 +140,10 @@ div{
     .music {grid-gap: 20px}
     .header * {width: 90%}
     #selectSong{
-        width: inherit;
+        width: 160px;;
     }
     #playButton, #pauseButton, #stopButton{
-        width: 4em;
-        height: 4em;
+        width: 3.5em;
+        height: 3.5em;
     }
 }
