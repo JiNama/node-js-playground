@@ -87,7 +87,7 @@ div{
     grid-area: fetchlist;
 }
 
-.menu{
+.image{
     grid-area: menu;
     padding: 10px;
 }
@@ -118,6 +118,23 @@ div{
     justify-self: center;
 }
 
+#selectSong{
+    height: 40px;
+    font-size:15px;
+}
+
+#playButton, #pauseButton, #stopButton{
+    width: 6em;
+    height: 6em;
+}
+
+@media only screen and (max-width: 960px) {
+    #playButton, #pauseButton, #stopButton{
+        width: 5em;
+        height: 5em;
+    }
+}
+
 @media only screen and (max-width: 600px)  {   
     .header {font-size: 2em}
     .bottomfooter {font-size: 10px; display:flex; align-items: center; justify-content: center; }
@@ -125,8 +142,15 @@ div{
         'header header header header'
         'content content music music';
     }
-    .menu {display:none}
+    .image {display:none}
     .music select {width: 120px}
     .music {grid-gap: 20px}
     .header * {width: 90%}
-}   
+    #selectSong{
+        width: inherit;
+    }
+    #playButton, #pauseButton, #stopButton{
+        width: 4em;
+        height: 4em;
+    }
+}
