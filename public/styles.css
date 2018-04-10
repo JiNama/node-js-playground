@@ -7,17 +7,15 @@ div{
 }
 
 .footercontainer{
-    overflow: hidden;
+    background:#6d0019;
+    position: absolute;
+    bottom:0;
+    width: 100%;
 }
 
 .bottomfooter{
-    margin-top: 10px;
     font-size: 18px;
-    position: relative;
-    bottom:0;
     width:100%;
-    height:40px;
-    background:#6d0019;
     padding:10px;
     color:darkgrey;
     text-align: center;
@@ -113,7 +111,8 @@ div{
 
 @media only screen and (max-width: 600px)  {   
     .header {font-size: 2em}
-    .bottomfooter {font-size: 10px; display:flex; align-items: center; justify-content: center; position: relative}
+    .footercontainer {display:flex; align-items: center; justify-content: center; position: relative}
+    .bottomfooter {font-size: 10px}
     .gridinindex {grid-template-areas: 
         'header header header header'
         'content content music music'
