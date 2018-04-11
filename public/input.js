@@ -39,11 +39,4 @@ function gridPage() {
 
 function changedSong() {
     var getSong = $('#selectSong').val();
-    if (getSong == 'Modern Slavery') {
-        $('#musicPlayer').attr('src', 'music/modernslavery.mp3');
-    } else if (getSong == 'Faded Heart') {
-        $('#musicPlayer').attr('src', 'music/fadedheart.mp3');
-    } else if (getSong == 'Dancing In The Moonlight') {
-        $('#musicPlayer').attr('src', 'music/dancinginthemoonlight.mp3');
-    }
 }
