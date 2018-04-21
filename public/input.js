@@ -22,21 +22,6 @@ function getData() {
     $.getJSON('./list', (data) => alert(JSON.stringify(data, null, 2)));
 }
 
-$('#playButton').click(() => { $('#musicPlayer').trigger('play'); $('#musicPlayer').animate({ volume: 1 }, 500); });
-$('#pauseButton').click(() => {
-    $('#musicPlayer').animate({ volume: 0 }, 500);
-    setTimeout(() => $('#musicPlayer').trigger('pause'), 500);
-});
-$('#stopButton').click(() => {
-    $('#musicPlayer').animate({ volume: 0 }, 500);
-    setTimeout(() => $('#musicPlayer').trigger('pause'), 500);
-    setTimeout(() => $('#musicPlayer').prop("currentTime", 0), 550);
-});
-
 function gridPage() {
     window.location = 'grid';
-}
-
-function changedSong() {
-    var getSong = $('#selectSong').val();
 }

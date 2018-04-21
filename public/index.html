@@ -11,7 +11,9 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
         crossorigin="anonymous">
         </script>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/player.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Node.js Playground</title>
 </head>
 
@@ -23,7 +25,7 @@
         </h1>
     </div>
 
-    <div class="gridinindex">
+    <div class="grid">
         <div class="header">
             <input id="inputName" placeholder="Name" />
             <input id="inputAge" placeholder="Age" />
@@ -35,41 +37,41 @@
         </div>
         <div class="content">
             <div>
-                
+
             </div>
         </div>
-        <div class="music">
-            <div style="text-align:center; padding-top:20px">
-                <select id="selectSong" onchange="changedSong()">
-                    <option>Dancing In The Moonlight</option>
-                </select>
-            </div>
-            <div class="musicButtonContainer">
-                <button id="playButton">
-                    <img src="https://png.icons8.com/ios/50/000000/next.png" width="20px" height="20px">
-                </button>
-                <button id="pauseButton">
-                    <img src="https://png.icons8.com/ios/50/000000/pause-squared-filled.png" width="20px" height="20px">
-                </button>
-                <button id="stopButton">
-                    <img src="https://png.icons8.com/metro/50/000000/close-window.png" width="20px" height="20px">
-                </button>
+        <div class="upload">
+            <div>
+                <input type="file" id="musicUploader" style="display: none;" />
+                <input type="button" value="Browse..." onclick="document.getElementById('musicUploader').click();" />
             </div>
         </div>
     </div>
-
-    <div class="footercontainer">
-        <div class="bottomfooter">
-            Author: Joshua Shephard
-            <br>
-            Purpose: Messing around with REST API, writing to JSON file.
-            <br>
-            Also teaching myself basic web design using CSS Grid and other useful tools.</div>
+    <div class="player">
+        <!-- BOTTOM OF PAGE (PLAYER) -->
+        <div class="button-container">
+            <!-- BUTTON CONTAINER -->
+            <i class="material-icons" onclick="play()">play_arrow</i>
+            <!-- PLAY BUTTON -->
+            <i class="material-icons" onclick="pause()">pause</i>
+            <!-- PAUSE BUTTON -->
+            <i class="material-icons" onclick="stop()">stop</i>
+            <!-- STOP BUTTON -->
+        </div>
+        <div class="current-time-container">
+            <progress max="100" id="progressBar"></progress>
+        </div>
+        <div class="song-current-time">
+            <nobr>
+                <span id="songCurrentTime">0:00</span>
+                /
+                <span id="songDuration">0:00</span>
+            </nobr>
+        </div>
     </div>
-
-    <audio src="music/dancinginthemoonlight.mp3" type="audio/mpeg" id="musicPlayer"></audio>
 
     <script src="input.js"></script>
+    <script src="music.js"></script>
 
 </body>
 
