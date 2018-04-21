@@ -1,84 +1,95 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Tajawal');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-div{
-    color:black;
+.grid>div {
+  background-color: #6d0019;
 }
 
-.grid > div{
-    background-color: #6d0019;
+.grid {
+  grid-gap: 10px;
+  padding: 10px;
+  background-color: rgb(51, 51, 51);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(6em, auto);
+  grid-template-areas: 'header header header header' 'menu content content upload';
 }
 
-.grid{
-    grid-gap: 10px;
-    padding: 10px;
-    background-color: rgb(51, 51, 51);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(6em, auto);
-    grid-template-areas: 
-    'header header header header'
-    'menu content content upload';
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 'name age' 'submit fetchlist';
+  grid-gap: 15px;
+  padding: 15px;
 }
 
-.header{
-    grid-area: header;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    'name age'
-    'submit fetchlist';
-    grid-gap: 15px;
-    padding: 15px;
+.header * {
+  width: 30%;
 }
 
-.header *{
-    width: 30%;
+#inputName {
+  grid-area: name;
+  justify-self: right;
 }
 
-#inputName{
-    grid-area: name;
-    justify-self: right;
-}
-#inputAge{
-    grid-area: age;
-}
-#buttonSubmit{
-    grid-area: submit;
-    justify-self: right;
-}
-#buttonFetchList{
-    grid-area: fetchlist;
+#inputAge {
+  grid-area: age;
 }
 
-.image{
-    grid-area: menu;
-    padding: 10px;
+#buttonSubmit {
+  grid-area: submit;
+  justify-self: right;
 }
 
-.content{
-    grid-area: content;
-    padding: 10px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+#buttonFetchList {
+  grid-area: fetchlist;
 }
 
-.upload{
-    grid-area: upload;
-    display: grid;
-    justify-items: center;
-    align-items: center;
+.image {
+  grid-area: menu;
+  padding: 10px;
 }
 
-@media only screen and (max-width: 600px)  {   
-    .header {font-size: 2em}
-    .grid {grid-template-areas: 
-        'header header header header'
-        'content content upload upload'
-        'menu menu menu menu';
-    }
-    .header * {width: 90%}
+.content {
+  grid-area: content;
+  padding: 10px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload {
+  grid-area: upload;
+  font-family: Tajawal, sans-serif;
+  font-size: 1.8vw;
+  color: white;
+  display: grid;
+  justify-items: center;
+  grid-auto-rows: min-content;
+  align-content: center;
+}
+
+.upload>div>p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 2em
+  }
+  .grid {
+    grid-template-areas: 'header header header header' 'content content upload upload' 'menu menu menu menu';
+  }
+  .header * {
+    width: 90%
+  }
+  .upload {
+    font-size: 3vw;
+  }
 }

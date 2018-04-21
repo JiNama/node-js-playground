@@ -24,16 +24,18 @@ mongo.connect('mongodb://localhost:27017/', (err, db) => {
 */
 
 
+
+
 //USE /public AND GET RID OF HTML EXTENSION
 app.use(express.static('public', {
-    extensions: ['html']
+  extensions: ['html']
 }));
 
 //CHECK IF SERVER IS RUNNING
 if (server) {
-    console.log("Server is running! Hold 'ctrl' and press 'c' to exit.");
+  console.log("Server is running! Hold 'ctrl' and press 'c' to exit.");
 } else {
-    console.log("Error.");
+  console.log("Error.");
 }
 
 //INFO = info.json AS JSON FILE
@@ -44,38 +46,38 @@ app.get('/list', getInfo);
 
 //DISPLAY INFO (info.json)
 function getInfo(req, res) {
-    res.json(info);
+  res.json(info);
 }
 
 // request user input through url
 app.get('/add/:name/:age/', addInfo);
 
 function addInfo(req, res) {
-    let inputName = (req.params.name).toLowerCase();
-    let inputAge = Number(req.params.age);
+  let inputName = (req.params.name).toLowerCase();
+  let inputAge = Number(req.params.age);
 
-    // {inputName: inputAge}
-    info[inputName] = inputAge;
+  // {inputName: inputAge}
+  info[inputName] = inputAge;
 
-    fs.writeFileSync('info.json', JSON.stringify(info, null, 4));
+  fs.writeFileSync('info.json', JSON.stringify(info, null, 4));
 
-    let thanksForAdding = {
-        Message: 'Thank you for adding data!',
-        Name: inputName,
-        Age: inputAge
-    }
+  let thanksForAdding = {
+    Message: 'Thank you for adding data!',
+    Name: inputName,
+    Age: inputAge
+  }
 
-    res.statusCode = 302;
-    res.setHeader('Location', '/');
-    res.end();
+  res.statusCode = 302;
+  res.setHeader('Location', '/');
+  res.end();
 
-    //res.send(thanksForAdding);
+  //res.send(thanksForAdding);
 
 }
 
 //app.redirect(); changes URL josh!!!
 
 var http = require("http");
-setInterval(function () {
-    http.get("http://joshuashephard.herokuapp.com");
+setInterval(function() {
+  http.get("http://joshuashephard.herokuapp.com");
 }, 300000); // every 5 minutes (300000)
