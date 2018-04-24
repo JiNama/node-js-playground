@@ -76,3 +76,4 @@ function addInfo(req, res) {
 }
 
 //app.redirect(); changes URL josh!!!
+//END OF CODE
