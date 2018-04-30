@@ -6,7 +6,7 @@ div>div>i:hover {
 
 .player {
   background: #6d0019;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   display: grid;
