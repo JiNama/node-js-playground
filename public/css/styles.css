@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-template-columns: 1fr min-content min-content 1fr;
   grid-auto-rows: minmax(6em, auto);
-  grid-template-areas: 'header buttons buttons upload' 'menu content content upload';
+  grid-template-areas: 'header buttons buttons upload' 'content content content upload';
 }
 
 .header {
@@ -61,11 +61,6 @@ body {
   grid-area: fetchlist;
 }
 
-.image {
-  grid-area: menu;
-  padding: 10px;
-}
-
 .content {
   grid-area: content;
   padding: 10px;
@@ -99,7 +94,7 @@ body {
   }
   .grid {
     grid-template-columns: 1fr;
-    grid-template-areas: 'header' 'menu' 'upload';
+    grid-template-areas: 'header' 'upload';
   }
   .header * {
     width: 90%;
